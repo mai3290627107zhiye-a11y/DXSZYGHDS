@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第四届全国大学生职业规划大赛 · 备赛资料包</title>
+<style>
+  :root{
+    --ink:#14202e; --ink-2:#3d4d63; --muted:#6b7c93; --line:#e2e8f0;
+    --bg:#f6f8fb; --card:#ffffff; --brand:#0f4c81; --brand-2:#1a6fa8;
+    --accent:#c8912f; --green:#1f7a5c; --red:#b03a2e; --soft:#eef4fa;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC",sans-serif;
+  }
+  .wrap{display:grid; grid-template-columns:250px minmax(0,1fr); max-width:1360px; margin:0 auto; gap:0}
+  /* ---------- sidebar ---------- */
+  aside{
+    position:sticky; top:0; align-self:start; height:100vh; overflow-y:auto;
+    padding:28px 18px 40px; border-right:1px solid var(--line); background:#fff;
+  }
+  .brand{font-weight:700; font-size:15px; color:var(--brand); line-height:1.4; margin-bottom:4px}
+  .brand small{display:block; font-weight:400; color:var(--muted); font-size:12px; margin-top:6px; letter-spacing:.04em}
+  aside ol{list-style:none; margin:22px 0 0; padding:0; counter-reset:nav}
+  aside li{margin:0}
+  aside a{
+    display:block; padding:7px 10px 7px 34px; margin:1px 0; border-radius:7px;
+    color:var(--ink-2); text-decoration:none; font-size:13.5px; position:relative; counter-increment:nav;
+  }
+  aside a::before{
+    content:counter(nav); position:absolute; left:10px; top:7px;
+    font-size:11px; color:var(--muted); font-variant-numeric:tabular-nums;
+  }
+  aside a:hover{background:var(--soft); color:var(--brand)}
+  /* ---------- main ---------- */
+  main{padding:38px 46px 90px; min-width:0}
+  .hero{
+    background:linear-gradient(135deg,#0f4c81 0%,#1a6fa8 60%,#2a8ab8 100%);
+    color:#fff; border-radius:16px; padding:34px 36px; box-shadow:0 10px 30px rgba(15,76,129,.18);
+  }
+  .hero .kicker{font-size:12.5px; letter-spacing:.16em; opacity:.85; text-transform:uppercase}
+  .hero h1{margin:10px 0 6px; font-size:30px; line-height:1.3; letter-spacing:.01em}
+  .hero .theme{margin:14px 0 0; font-size:15px; opacity:.95}
+  .hero .meta{margin-top:18px; display:flex; flex-wrap:wrap; gap:8px}
+  .hero .meta span{
+    background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.25);
+    padding:5px 11px; border-radius:999px; font-size:12.5px;
+  }
+  .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:22px 0 4px}
+  .stat{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px}
+  .stat b{display:block; font-size:24px; color:var(--brand); line-height:1.2; font-variant-numeric:tabular-nums}
+  .stat span{font-size:12.5px; color:var(--muted)}
+  section{scroll-margin-top:20px; margin-top:44px}
+  h2{
+    font-size:22px; margin:0 0 16px; padding-bottom:10px; border-bottom:2px solid var(--line);
+    display:flex; align-items:baseline; gap:10px;
+  }
+  h2 .no{font-size:12px; color:var(--accent); letter-spacing:.1em; font-weight:700; font-variant-numeric:tabular-nums}
+  h3{font-size:16.5px; margin:26px 0 10px; color:var(--brand)}
+  h4{font-size:14.5px; margin:18px 0 8px; color:var(--ink-2)}
+  p{margin:10px 0}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 22px; margin:14px 0}
+  .card.warn{border-left:4px solid var(--red); background:#fdf6f5}
+  .card.tip{border-left:4px solid var(--green); background:#f3faf7}
+  .card.note{border-left:4px solid var(--accent); background:#fdfaf2}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  @media (max-width:1000px){
+    .wrap{grid-template-columns:1fr}
+    aside{position:static; height:auto; border-right:none; border-bottom:1px solid var(--line); padding:20px}
+    aside ol{display:flex; flex-wrap:wrap; gap:2px}
+    aside a{padding:6px 10px 6px 30px; font-size:13px}
+    main{padding:24px 20px 60px}
+    .grid2{grid-template-columns:1fr}
+    .hero{padding:26px 22px}
+    .hero h1{font-size:23px}
+  }
+  table{width:100%; border-collapse:collapse; margin:12px 0; font-size:14px; background:#fff}
+  th,td{border:1px solid var(--line); padding:9px 11px; text-align:left; vertical-align:top}
+  th{background:#f0f5fa; color:var(--brand); font-weight:600; white-space:nowrap}
+  tbody tr:nth-child(even){background:#fbfcfe}
+  td.num{font-variant-numeric:tabular-nums; white-space:nowrap}
+  .scroll{overflow-x:auto}
+  ul,ol{padding-left:22px; margin:10px 0}
+  li{margin:5px 0}
+  blockquote{
+    margin:14px 0; padding:10px 16px; border-left:3px solid var(--brand-2);
+    background:var(--soft); color:var(--ink-2); font-size:14px; border-radius:0 8px 8px 0;
+  }
+  a{color:var(--brand-2); text-decoration:none; border-bottom:1px solid rgba(26,111,168,.3)}
+  a:hover{border-bottom-color:var(--brand-2); background:rgba(26,111,168,.06)}
+  code{background:#f0f3f7; padding:1px 5px; border-radius:4px; font-size:13px}
+  .pill{display:inline-block; padding:1px 8px; border-radius:999px; font-size:11.5px; background:var(--soft); color:var(--brand); border:1px solid #d5e4f0; white-space:nowrap}
+  .pill.g{background:#f0f9f4; color:var(--green); border-color:#cfe9dd}
+  .pill.r{background:#fdf2f0; color:var(--red); border-color:#f0d5cf}
+  .pill.y{background:#fdf8ee; color:#8a6216; border-color:#f0e3c6}
+  .timeline{position:relative; margin:22px 0 0; padding-left:26px}
+  .timeline::before{content:""; position:absolute; left:7px; top:6px; bottom:6px; width:2px; background:linear-gradient(#1a6fa8,#c8912f)}
+  .tl{position:relative; margin-bottom:20px}
+  .tl::before{content:""; position:absolute; left:-23px; top:6px; width:11px; height:11px; border-radius:50%; background:#fff; border:2.5px solid var(--brand-2)}
+  .tl.now::before{background:var(--accent); border-color:var(--accent)}
+  .tl b{display:block; font-size:14.5px}
+  .tl .when{font-size:12px; color:var(--accent); letter-spacing:.05em; font-weight:600}
+  .tl p{margin:3px 0 0; font-size:13.5px; color:var(--ink-2)}
+  .check{list-style:none; padding:0}
+  .check li{display:flex; gap:9px; align-items:flex-start; padding:7px 0; border-bottom:1px dashed var(--line); font-size:14px}
+  .check li:last-child{border-bottom:none}
+  .check input{margin-top:5px; accent-color:var(--brand); flex:none}
+  .k{font-weight:600; color:var(--brand)}
+  .quote-src{font-size:12px; color:var(--muted); margin-top:4px}
+  footer{margin-top:60px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:12.5px}
+  .tag{font-size:11px; padding:1px 6px; border-radius:4px; background:#eef4fa; color:var(--brand); margin-left:6px; white-space:nowrap}
+  @media print{
+    body{background:#fff; font-size:11.5pt}
+    aside{display:none}
+    .wrap{display:block}
+    main{padding:0}
+    .hero{background:#0f4c81 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact}
+    section{page-break-inside:auto; margin-top:26px}
+    h2{page-break-after:avoid}
+    table{page-break-inside:avoid; font-size:9.5pt}
+    .card{page-break-inside:avoid}
+    a{color:var(--ink); border:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<aside>
+  <div class="brand">第四届全国大学生职业规划大赛<small>备赛资料包 · 2026-10-28 整理</small></div>
+  <ol>
+    <li><a href="#overview">赛事总览</a></li>
+    <li><a href="#timeline">时间轴</a></li>
+    <li><a href="#choose">赛道怎么选</a></li>
+    <li><a href="#growth">成长赛道</a></li>
+    <li><a href="#employment">就业赛道</a></li>
+    <li><a href="#scoring">评分对照表</a></li>
+    <li><a href="#platform">报名与材料</a></li>
+    <li><a href="#resources">备赛资源</a></li>
+    <li><a href="#cases">往届案例</a></li>
+    <li><a href="#tools">权威工具</a></li>
+    <li><a href="#pitfalls">避坑清单</a></li>
+    <li><a href="#todo">我的待办</a></li>
+    <li><a href="#files">资料文件与来源</a></li>
+  </ol>
+</aside>
+
+<main>
+<div class="hero">
+  <div class="kicker">教育部 · 重庆市人民政府 主办</div>
+  <h1>第四届全国大学生职业规划大赛<br>备赛资料包</h1>
+  <p class="theme">大赛主题：<strong>筑梦青春志在四方，规划启航职引未来</strong></p>
+  <div class="meta">
+    <span>2026年10月 — 2027年4月</span>
+    <span>校赛 → 省赛 → 全国总决赛</span>
+    <span>官方平台 zgs.chsi.com.cn</span>
+    <span>全国总决赛承办：重庆</span>
+    <span>依据：教学函〔2026〕2号</span>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat"><b>800</b><span>全国总决赛选手约800人</span></div>
+  <div class="stat"><b>450 / 350</b><span>成长赛道 / 就业赛道名额</span></div>
+  <div class="stat"><b>≤1</b><span>每校各组别入围上限</span></div>
+  <div class="stat"><b>2 / 3</b><span>成长赛道材料数 / 就业赛道材料数</span></div>
+  <div class="stat"><b>2027-01-31</b><span>报名最晚截止（兜底线）</span></div>
+</div>
+
+<!-- ============ 1 ============ -->
+<section id="overview">
+  <h2><span class="no">01</span>赛事总览：先搞清这 5 件事</h2>
+
+  <div class="card tip">
+    <p style="margin-top:0"><strong>一句话版本：</strong>这是教育部主办的全国性A类赛事，2026年10月启动、2027年4月全国总决赛，分<strong>成长赛道</strong>（非毕业年级，讲"成长过程"）和<strong>就业赛道</strong>（高年级求职+研究生，讲"能不能拿下岗位"）两条赛道，走<strong>校赛→省赛→国赛</strong>三级，全程在 <code>zgs.chsi.com.cn</code> 报名。</p>
+  </div>
+
+  <table>
+    <tbody>
+      <tr><th style="width:130px">届次 / 文件</th><td>第四届 · 《教育部关于举办第四届全国大学生职业规划大赛的通知》（教学函〔2026〕2号），2026-10-08 印发</td></tr>
+      <tr><th>主办 / 承办</th><td>教育部、重庆市人民政府主办；全国总决赛由重庆市教委、重庆大学、重庆师范大学承办；组委会秘书处设在教育部学生服务与素质发展中心</td></tr>
+      <tr><th>赛道设置</th><td>主体赛事仅两条：<strong>成长赛道</strong>（高教组、职教组）、<strong>就业赛道</strong>（高教本科生组、高教研究生组、职教组）<br><span class="pill y">注意</span> 本届通知未列"课程教学赛道"，教师参赛政策待后续文件</td></tr>
+      <tr><th>参赛对象</th><td>普通高等学校<strong>全日制在校生</strong>；每人只能选<strong>一个赛道</strong>报名</td></tr>
+      <tr><th>奖项</th><td>全国总决赛：金奖、银奖、铜奖、优秀指导教师奖，另设地方优秀组织奖、校赛育人奖（<strong>第四届各奖项具体名额未公布</strong>）</td></tr>
+      <tr><th>同期活动</th><td>校企供需对接、校赛育人成果展、以创促就等</td></tr>
+    </tbody>
+  </table>
+
+  <div class="card warn">
+    <h4 style="margin-top:0">三条硬性红线（违反即取消资格）</h4>
+    <ol style="margin-bottom:0">
+      <li><strong>一人一赛道</strong>：不能兼报成长/就业。</li>
+      <li><strong>往届限制</strong>：往届全国总决赛获<strong>金奖、银奖</strong>的选手，不得再次报名<strong>原赛道</strong>（部分省校口径更严：往届省赛金奖、银奖亦不得报原赛道）。</li>
+      <li><strong>真实原创</strong>：材料须真实、原创，不得含违法违规内容，涉密内容须脱密；推荐名单与材料需<strong>学校盖章确认</strong>，造假取消资格并追责。</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 2 ============ -->
+<section id="timeline">
+  <h2><span class="no">02</span>时间轴：现在处在哪一步</h2>
+
+  <div class="timeline">
+    <div class="tl now">
+      <span class="when">2026年10月（现在）</span>
+      <b>大赛启动 · 院赛校赛密集启动</b>
+      <p>通知已下发，各校 10—12 月陆续办院赛、校赛。<strong>这是决定能否参赛的窗口，不是"准备阶段"。</strong></p>
+    </div>
+    <div class="tl">
+      <span class="when">2026年10月 — 2027年1月</span>
+      <b>平台报名 + 提交材料</b>
+      <p>截止日由各地各校自定，<strong>不得晚于 2027-01-31</strong>。多数高校 11 月即收材料。</p>
+    </div>
+    <div class="tl">
+      <span class="when">2026年10月 — 2026年12月（各校自定）</span>
+      <b>校赛</b>
+      <p>院赛→校赛，形式为材料评审＋现场主题陈述与问答；校赛期间平台开放生涯闯关 / 职业适配度测评。</p>
+    </div>
+    <div class="tl">
+      <span class="when">2026年12月 — 2027年3月上旬</span>
+      <b>省赛</b>
+      <p>各省须在 <strong>2027-03-15 前</strong>完成省赛；多在 12 月—次年 3 月举行，含网络评审（材料）与现场赛。</p>
+    </div>
+    <div class="tl">
+      <span class="when">2027年4月</span>
+      <b>全国总决赛（重庆）</b>
+      <p>约 800 人现场比赛；晋级后<strong>指导教师、目标职业、目标行业不得修改</strong>。具体日程另行通知。</p>
+    </div>
+  </div>
+
+  <div class="card note">
+    <p style="margin:0"><strong>提醒：</strong>通知里的"2027-01-31"只是全国兜底线。实际卡点是<strong>你本校的院赛/校赛通知</strong>——很多学校 11 月初就截止收材料。下一步第一件事：搜"学校名 + 第四届全国大学生职业规划大赛"，或直接问辅导员/就业中心。</p>
+  </div>
+</section>
+
+<!-- ============ 3 ============ -->
+<section id="choose">
+  <h2><span class="no">03</span>赛道怎么选（30 秒自测）</h2>
+
+  <div class="scroll">
+  <table>
+    <thead><tr><th>你的情况</th><th>建议赛道</th><th>理由</th></tr></thead>
+    <tbody>
+      <tr><td>本科 1—3 年级、专科非毕业年级</td><td><strong>成长赛道</strong></td><td>就业赛道要求"计划求职的高年级学生"，低年级不符合对象要求</td></tr>
+      <tr><td>本科三、四年级 / 专科二、三年级 / 研究生，正在找工作</td><td><strong>就业赛道</strong></td><td>可直接获得企业岗位录用意向，"天降offer"环节含金量高</td></tr>
+      <tr><td>已通过推免获得录取资格</td><td><strong>只能报成长赛道</strong></td><td>通知明确就业赛道"不含已通过推免获得录取资格的学生"</td></tr>
+      <tr><td>研究生</td><td><strong>就业赛道（高教研究生组）</strong></td><td>就业赛道设研究生组；成长赛道面向本专科非毕业年级</td></tr>
+      <tr><td>没有实习经历、成果偏少</td><td>成长赛道更友好</td><td>成长赛道 50 分看"围绕目标的行动与阶段性成果"，可从零构建证据链</td></tr>
+      <tr><td>有扎实实习/项目/竞赛，目标岗位明确</td><td>就业赛道优势大</td><td>就业赛道 80 分压在岗位胜任力（40 综合素质＋40 专业能力）</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="card">
+    <p style="margin-top:0"><strong>选赛道的两个隐藏变量：</strong></p>
+    <ul style="margin-bottom:0">
+      <li><strong>目标职业/目标行业一旦填报，越往后越不能改</strong>，且直接决定国赛"划分赛场"与对手群体。选之前先想清楚"目标职业是什么"。</li>
+      <li><strong>校内竞争强度不同</strong>：多数学校成长赛道报名人数远多于就业赛道，就业赛道晋级概率可能更高，但要求真材实料。可先问就业中心往年各赛道报名人数。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 4 ============ -->
+<section id="growth">
+  <h2><span class="no">04</span>成长赛道：把"成长过程"讲成一条证据链</h2>
+
+  <div class="card tip">
+    <p style="margin:0"><strong>官方考察重点：</strong>树立生涯发展理念并合理设定职业目标、围绕实现目标持续行动并不断调整的成长过程，通过学习实践提升综合素质和专业能力，体现正确的择业就业观念。参赛学生可获得<strong>实习机会</strong>。</p>
+  </div>
+
+  <h3>4.1 参赛材料（只有 2 份）</h3>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>材料</th><th>格式</th><th>大小</th><th>篇幅</th><th>官方内容要求</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>生涯发展报告</strong></td><td>PDF</td><td class="num">≤10 MB</td>
+        <td class="num">正文 ≤2000 字<br>图表 ≤5 张</td>
+        <td>①设定职业目标的过程；②实现职业目标的具体行动和成效；③职业目标及行动的动态调整</td>
+      </tr>
+      <tr>
+        <td><strong>生涯发展展示</strong></td><td>PPT</td><td class="num">≤50 MB</td>
+        <td>官方<strong>未</strong>规定页数</td>
+        <td>与报告配套，用于现场主题陈述</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p><span class="pill">防误传</span> "PPT 限 20 页""报告必须有封面模板""文件名必须 XX"——<strong>都不是国赛规定</strong>，是各校校赛自加要求。国赛层面只有格式、大小、字数、图表数约束。</p>
+
+  <h3>4.2 现场环节</h3>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>顺序</th><th>环节</th><th>时长</th><th>内容</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>主题陈述</td><td class="num"><strong>7 分钟</strong></td><td>结合生涯发展报告作陈述</td></tr>
+      <tr><td>2</td><td>评委提问</td><td class="num"><strong>5 分钟</strong></td><td>评委结合陈述和现场表现提问</td></tr>
+      <tr><td>3</td><td>天降实习offer（实习意向）</td><td class="num"><strong>2 分钟</strong></td><td>用人单位决定是否给出实习意向并点评</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>官方注明"<strong>各环节根据实际情况可适当调整</strong>"，所以校赛常见 6 分钟陈述——按本校规则练，但按 7 分钟准备，对国赛更保险。</p>
+
+  <h3>4.3 评审标准（100 分）——本届最大变化在这里</h3>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>指标</th><th>分值</th><th>评分要点</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>职业目标</strong></td><td class="num">25</td>
+        <td>①将个人理想与国家需要、经济社会发展相结合，体现正确择业就业观念；②结合学科专业，多渠道了解行业发展趋势与就业市场需求，综合分析个人价值追求、能力优势、兴趣偏好，确定职业发展方向</td>
+      </tr>
+      <tr>
+        <td><strong>学习实践行动</strong></td><td class="num">50</td>
+        <td>①基于目标的能力要求科学分析差距，制定合理可行的学习、实践计划；②结合学校育人特色与所学专业，充分挖掘利用校内外资源开展学习实践；③在行动中克服困难、灵活应变、积极进取，取得阶段性成果</td>
+      </tr>
+      <tr>
+        <td><strong>优化改进</strong></td><td class="num">25</td>
+        <td>①及时对行动成效自我评估与反思，总结收获、不足及原因；②对职业目标与行动路径进行动态优化，积极应对变化与挑战</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="card warn">
+    <p style="margin:0"><strong>关键变化：</strong>第三届为 <strong>30 / 50 / 20</strong>，第四届改为 <strong>25 / 50 / 25</strong>——"优化改进"从 20 分提到 25 分，"职业目标"从 30 分降到 25 分。<br>
+    <strong>含义：</strong>评委更想看"你如何在行动中反思并调整路线"，而不只是"目标定得多漂亮"。硬塞一个完美目标反而丢分。<br>
+    <span class="pill r">常见错误</span> 多所学校 2026 年 10 月的通知仍在沿用第三届的 30/50/20 与 6 分钟陈述，别拿旧口径当标准。</p>
+  </div>
+
+  <h3>4.4 按评分倒推：报告怎么写</h3>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>评分项</th><th>落在报告哪一段</th><th>必须写出来的东西</th></tr></thead>
+    <tbody>
+      <tr><td>职业目标 25</td><td>第一节：目标怎么来的</td><td>国家/行业需求（带数据或政策依据）＋ 专业匹配 ＋ 自我认知（价值/能力/兴趣，来自测评与真实体验）→ 三者收敛出<strong>唯一的、具体的</strong>目标职业</td></tr>
+      <tr><td>学习实践行动 50</td><td>主体：做了什么</td><td>能力差距表（目标要求 vs 我现状）→ 分阶段计划 → 用了哪些校内外资源 → 遇到什么困难怎么解决 → <strong>可量化的阶段性成果</strong>（证书/项目/实习/作品/数据）</td></tr>
+      <tr><td>优化改进 25</td><td>收尾：怎么调整</td><td>自我评估与反思 → <strong>至少一次真实的路线修正</strong>：触发事件、调整依据、调整后结果。没有调整 = 丢这 25 分</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="card note">
+    <p style="margin-top:0"><strong>2000 字怎么分配（建议）：</strong>目标 400—500 字 / 行动与成果 1000—1100 字 / 优化改进 400—500 字。图表 ≤5 张，一张图只讲一件事（如：能力差距雷达图、成长路线时间轴、成果数据图）。</p>
+    <p style="margin-bottom:0"><strong>7 分钟陈述怎么分：</strong>目标约 1.5′ ＋ 行动与成果约 4′ ＋ 优化迭代约 1.5′，与报告口径完全一致，不超时。</p>
+  </div>
+</section>
+
+<!-- ============ 5 ============ -->
+<section id="employment">
+  <h2><span class="no">05</span>就业赛道：本质是一场真实求职</h2>
+
+  <div class="card tip">
+    <p style="margin:0"><strong>官方考察重点：</strong>求职实战能力，个人综合素质、专业能力与目标职业的契合度，个人发展路径与就业市场需求的适应度。参赛学生可获得<strong>岗位录用意向</strong>。</p>
+  </div>
+
+  <h3>5.1 参赛材料（3 份）</h3>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>材料</th><th>格式</th><th>大小</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td><strong>求职简历</strong></td><td>PDF</td><td>官方未规定</td><td>面向目标岗位的真实简历；"限 1 页"是部分学校自加，非国赛规定</td></tr>
+      <tr><td><strong>求职综合展示</strong></td><td>PPT</td><td class="num">≤50 MB</td><td>支撑主题陈述</td></tr>
+      <tr><td><strong>辅助证明材料</strong></td><td>PDF（实践、实习、获奖等，<strong>整合为单个文件</strong>）</td><td class="num">≤10 MB</td><td>部分学校通知误写为 50MB，官方口径是 <strong>10MB</strong>，按 10MB 准备最安全</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><span class="pill y">注意</span> 官方<strong>从未</strong>把"生涯规划书/职业规划报告"列为就业赛道材料——就业赛道考的是求职竞争力，不是规划文本。</p>
+
+  <h3>5.2 现场环节（三个环节，不是两个）</h3>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>环节</th><th>时长</th><th>内容</th></tr></thead>
+    <tbody>
+      <tr><td>主题陈述</td><td class="num"><strong>6 分钟</strong></td><td>结合求职综合展示 PPT，陈述个人求职意向和职业准备情况</td></tr>
+      <tr><td>综合面试</td><td class="num"><strong>6 分钟</strong></td><td>评委提出<strong>真实工作场景</strong>中可能遇到的问题，选手提出解决方案；评委结合陈述自由提问</td></tr>
+      <tr><td>天降offer（录用意向）</td><td class="num"><strong>2 分钟</strong></td><td>用人单位根据选手表现，决定是否给出录用意向并点评</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>5.3 评审标准（100 分）</h3>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>指标</th><th>分值</th><th>评分要点</th></tr></thead>
+    <tbody>
+      <tr><td><strong>职业目标</strong></td><td class="num">10</td><td>①结合就业市场需求与个人专业、能力、兴趣合理设定目标；②<strong>深入调研并准确把握</strong>目标职业的任职要求、工作内容、业务流程和发展路径</td></tr>
+      <tr><td rowspan="2"><strong>岗位胜任力</strong></td><td class="num">40</td><td><em>综合素质</em>：逻辑思维、沟通表达、团队协作、数字素养等；具有职业使命感和敬业奉献的职业精神</td></tr>
+      <tr><td class="num">40</td><td><em>专业能力</em>：目标岗位所需专业知识和技能，有相关实习实践经历，具备解决实际问题的专业能力</td></tr>
+      <tr><td><strong>发展潜力</strong></td><td class="num">10</td><td>持续学习能力、创新精神、应对不确定性挑战的能力，能适应未来职业发展要求和就业市场变化</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="card note">
+    <p style="margin-top:0"><strong>80 分在"岗位胜任力"</strong>，所以备赛重心是：<strong>岗位JD拆解 → 能力证据链（实习/项目/竞赛/证书）→ 可验证的成果数据</strong>。</p>
+    <p style="margin-bottom:0"><strong>职业目标那 10 分不是"写理想"，而是考调研深度</strong>：任职要求、工作内容、业务流程、发展路径——四件事你必须真答得出来。</p>
+  </div>
+
+  <h3>5.4 就业赛道特别提示</h3>
+  <ul>
+    <li><strong>先建简历</strong>：平台要求先在"国家大学生就业服务平台"（ncss.cn）完善简历，再回大赛平台选择该简历。</li>
+    <li><strong>目标职业/行业早定</strong>：晋级总决赛后，指导教师、目标职业、目标行业<strong>不得修改</strong>；部分省要求校赛/省赛各阶段保持一致，擅自更改可能被取消资格。</li>
+    <li><strong>综合面试用 STAR 结构答</strong>：情境（Situation）—任务（Task）—行动（Action）—结果（Result），结果尽量量化。</li>
+    <li><strong>天降offer 不计入 100 分表</strong>，但它是企业评委对你真实印象的出口，表现好可能直接拿到实习/录用意向。</li>
+  </ul>
+</section>
+
+<!-- ============ 6 ============ -->
+<section id="scoring">
+  <h2><span class="no">06</span>两赛道评分对照：一张表看懂重心差异</h2>
+
+  <div class="scroll">
+  <table>
+    <thead><tr><th>维度</th><th>成长赛道</th><th>就业赛道</th><th>解读</th></tr></thead>
+    <tbody>
+      <tr><td>总分</td><td class="num">100</td><td class="num">100</td><td>—</td></tr>
+      <tr><td>目标类</td><td class="num">职业目标 25</td><td class="num">职业目标 10</td><td>成长赛道更看重"目标形成过程"，就业赛道更看重"目标是否精准"</td></tr>
+      <tr><td>核心项</td><td class="num">学习实践行动 50</td><td class="num">岗位胜任力 80<br><span style="font-size:12px;color:#6b7c93">（综合素质40＋专业能力40）</span></td><td>成长赛道看"行动与成果"，就业赛道看"你是否胜任这个岗位"</td></tr>
+      <tr><td>潜力类</td><td class="num">优化改进 25</td><td class="num">发展潜力 10</td><td>成长赛道要"反思—调整闭环"，就业赛道要"可迁移能力"</td></tr>
+      <tr><td>现场时长</td><td class="num">7′+5′+2′</td><td class="num">6′+6′+2′</td><td>"+2′"都是企业发 offer/实习意向环节</td></tr>
+      <tr><td>与第三届比</td><td class="num"><span class="pill r">权重变了</span> 30/50/20 → 25/50/25</td><td class="num"><span class="pill g">未变</span> 10/80/10</td><td>本届修订集中在成长赛道</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="font-size:13.5px;color:#6b7c93">说明：分值与要点取自第四届方案的高校逐字转载版本（多校互证：青岛黄海学院、上海师范大学天华学院、长春职业技术大学等），建议与教育部附件1/2原文再核对一次（附件下载见文末）。</p>
+</section>
+
+<!-- ============ 7 ============ -->
+<section id="platform">
+  <h2><span class="no">07</span>报名与材料上传：12 步走完流程</h2>
+
+  <div class="scroll">
+  <table>
+    <thead><tr><th style="width:44px">步</th><th>操作</th><th>关键提示</th></tr></thead>
+    <tbody>
+      <tr><td class="num">0</td><td>先看本校校赛通知</td><td>报名截止日各校自定，<strong>校赛多在 10—12 月</strong>，错过就没有参赛资格</td></tr>
+      <tr><td class="num">1</td><td>打开 <a href="https://zgs.chsi.com.cn/" target="_blank" rel="noopener">zgs.chsi.com.cn</a> → 报名入口 → 学生用户</td><td>登录页可下载《学生操作手册》，先下再报</td></tr>
+      <tr><td class="num">2</td><td>用<strong>学信网账号</strong>登录</td><td>没有账号先注册；账号通常与本人身份证绑定</td></tr>
+      <tr><td class="num">3</td><td>完成身份核验</td><td>提示"学生身份未核验"时，先在学信档案核验再回来</td></tr>
+      <tr><td class="num">4</td><td>左侧"报名信息" → "点击报名参赛"</td><td>—</td></tr>
+      <tr><td class="num">5</td><td>选择<strong>赛道与组别</strong></td><td>只能选一个赛道；研究生报高教研究生组</td></tr>
+      <tr><td class="num">6</td><td>填写<strong>目标职业、目标行业</strong></td><td>决定国赛赛场分组；晋级后不得修改，报名时就定稿</td></tr>
+      <tr><td class="num">7</td><td>填写<strong>指导教师</strong></td><td>通知强调"指导教师实质参与"是审查项；晋级后不得修改</td></tr>
+      <tr><td class="num">8</td><td>上传参赛材料</td><td>就业赛道简历要先去 ncss.cn 建好再选</td></tr>
+      <tr><td class="num">9</td><td>勾选诚信声明 → 确认参赛</td><td>材料须真实、原创、脱密</td></tr>
+      <tr><td class="num">10</td><td>等<strong>校级管理员审核</strong></td><td>审核通过才算报名完成；"校赛不通过"可在报名期内修改重报</td></tr>
+      <tr><td class="num">11</td><td>晋级后按通知上传省赛/国赛材料</td><td>每阶段提交期内可反复修改，<strong>截止后锁定</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h4 style="margin-top:0">常见报错怎么办</h4>
+      <ul style="margin-bottom:0;font-size:14px">
+        <li><strong>"未查到全日制在校生学籍"</strong>：核对是否全日制、学籍是否注册、学信网账号是否与学籍匹配 → 联系校赛负责人</li>
+        <li><strong>看不到就业赛道测评</strong>：报名未审核通过，或身份未核验</li>
+        <li><strong>选不到简历</strong>：先去 ncss.cn 完善简历</li>
+        <li><strong>审核长期待审</strong>：直接打校赛通知上的联系人电话</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0">材料上传 4 条铁律</h4>
+      <ul style="margin-bottom:0;font-size:14px">
+        <li><strong>提前 2—3 天</strong>上传，给审核留时间</li>
+        <li><strong>截止后不能补交</strong>（平台锁定＋多数学校逾期不受理）</li>
+        <li><strong>命名统一</strong>：建议 <code>赛道-姓名-学号-目标职业</code>，按本校通知改</li>
+        <li><strong>盖章要留时间</strong>：推荐省赛的名单与材料需学校盖章确认，盖章即定稿</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>平台两个功能：生涯闯关 / 职业适配度测评</h3>
+  <ul>
+    <li><strong>官方定位</strong>：校赛期间开放，参赛选手"<strong>可根据需要选择使用</strong>"——国赛层面是选做，不是门槛。</li>
+    <li><strong>但要问本校</strong>：部分高校（如青岛科技大学）把"须完成生涯闯关"写进校赛报名条件，属校赛自定。</li>
+    <li><strong>生涯闯关是什么</strong>：8 关生涯探索任务（生涯愿景→专业探索→职业瞭望→兴趣揭秘→目标锚定→能力盘点→技能提升→生涯启航），全通可生成《生涯探索成长单》——非常适合当生涯发展报告的自我认知证据。</li>
+    <li><strong>职业适配度测评</strong>：就业赛道用，帮助了解行业与企业职能；报名审核通过后才可见。</li>
+    <li><strong>是否计分</strong>：官方未见计入评审分的条文；成本低、还能产素材，建议做了。</li>
+  </ul>
+</section>
+
+<!-- ============ 8 ============ -->
+<section id="resources">
+  <h2><span class="no">08</span>备赛资源：5 个真正能用的（附用途）</h2>
+
+  <div class="scroll">
+  <table>
+    <thead><tr><th>资源</th><th>来源</th><th>解决什么问题</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="https://www.gdust.edu.cn/jyzdzx/jyzd/20251110/4946.html" target="_blank" rel="noopener">《职业规划大赛常见问答》</a></td>
+        <td>广东科技学院就业中心 <span class="tag">高校官方</span></td>
+        <td><strong>规则速查</strong>：赛道、材料、环节、分值一页看全（注意其分值为第三届口径，成长赛道以 25/50/25 为准）</td>
+      </tr>
+      <tr>
+        <td><a href="https://nongxue.byau.edu.cn/2024/1112/c3464a127035/page.htm" target="_blank" rel="noopener">成长赛道评审标准逐条解读</a></td>
+        <td>黑龙江八一农垦大学 <span class="tag">高校官方</span></td>
+        <td><strong>把评分标准翻译成写作要点</strong>，附 4 条备赛建议（研究行业→细化目标→可落地计划→先写完整再打磨）</td>
+      </tr>
+      <tr>
+        <td><a href="https://news.gdmu.edu.cn/info/1004/70238.htm" target="_blank" rel="noopener">第四届培训会：双赛道解析与评审误区规避</a></td>
+        <td>广东医科大学 <span class="tag">高校官方</span>（2026-10-27）</td>
+        <td><strong>最要紧的一条认知</strong>：好作品是"不断向目标岗位靠拢的成长轨迹"，不是荣誉堆砌，要突出人岗匹配度</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.hainnu.edu.cn/2025/1112/c4315a160954/page.htm" target="_blank" rel="noopener">生涯发展报告撰写 + PPT + 答辩辅导</a></td>
+        <td>海南师范大学 <span class="tag">高校官方</span></td>
+        <td><strong>报告结构</strong>：用冰山/洋葱模型拆胜任力；按"职业目标—行动成果—目标契合度"三维写；PPT 要按评委视角组织</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.zzsvtc.edu.cn/jcjxb/info/1173/3588.htm" target="_blank" rel="noopener">主题陈述与答辩的"技术动作"</a></td>
+        <td>郑州软件职业技术学院 <span class="tag">高校官方</span></td>
+        <td><strong>路演技巧</strong>：一页一核心论点、故事钩＋数据钩、答辩用 STAR、从"背稿"变"讲方案"</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>6 周备赛节奏（可直接照做）</h3>
+  <div class="scroll">
+  <table>
+    <thead><tr><th style="width:70px">周期</th><th>目标</th><th>具体动作</th></tr></thead>
+    <tbody>
+      <tr><td><strong>第 1 周</strong></td><td>定规则</td><td>抄一遍评分分值表；对照本校通知确认材料上限与截止时间</td></tr>
+      <tr><td><strong>第 2 周</strong></td><td>定目标</td><td>用学职平台测评＋O*NET 交叉验证目标职业；列出"目标职业—岗位要求—我的差距"三列表</td></tr>
+      <tr><td><strong>第 3 周</strong></td><td>补证据</td><td>按"学习实践行动 50 分"倒推缺什么；能盖章的证明先去盖章</td></tr>
+      <tr><td><strong>第 4 周</strong></td><td>写报告</td><td>2000 字按"目标怎么来→做了什么→取得什么→怎么调整"四段式；图表 ≤5 张</td></tr>
+      <tr><td><strong>第 5 周</strong></td><td>做 PPT</td><td>一页一论点；开头故事钩、中段数据钩、结尾落到人岗匹配</td></tr>
+      <tr><td><strong>第 6 周</strong></td><td>模拟答辩</td><td>找 2 位非本专业老师按真实场景提问；录视频回看，控时</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ============ 9 ============ -->
+<section id="cases">
+  <h2><span class="no">09</span>往届案例：看金奖选手怎么讲</h2>
+
+  <div class="card note">
+    <p style="margin-top:0"><strong>现实情况：</strong>教育部只公布"获奖名单"，<strong>没有公开的获奖作品全文库</strong>（作品涉及个人隐私与版权）。所以别花时间找"往届国金报告原文"——不存在公开渠道。</p>
+  </div>
+
+  <div class="scroll">
+  <table>
+    <thead><tr><th>渠道</th><th>能拿到什么</th><th>链接</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>央视《青春的方向》</strong><span class="tag">最推荐</span></td>
+        <td>全国总决赛风采展示节目，能看到金奖选手的现场陈述片段与职业故事</td>
+        <td><a href="https://tv.cctv.com/2026/09/07/VIDEwXnDmBh2a6ATzYcb7c9n260907.shtml" target="_blank" rel="noopener">CCTV-10 节目页（第三届）</a></td>
+      </tr>
+      <tr>
+        <td>教育部获奖名单</td>
+        <td>历届金银铜奖具体名单（可作为"哪些学校/什么类型选手能进国赛"的参照）</td>
+        <td><a href="http://www.moe.gov.cn/srcsite/A15/s7063/202609/t20260902_1448809.html" target="_blank" rel="noopener">第三届</a> ｜ <a href="http://www.moe.gov.cn/srcsite/A15/s7063/202508/t20250826_1410565.html" target="_blank" rel="noopener">第二届</a></td>
+      </tr>
+      <tr>
+        <td>高校获奖新闻</td>
+        <td>选手的赛道、目标职业、备赛过程、指导教师——信息最碎但最真实</td>
+        <td><a href="https://career.csu.edu.cn/news/view/aid/204263/tag/xwkd" target="_blank" rel="noopener">中南大学国赛金奖报道</a>；检索法：<code>校名 + 职业规划大赛 + 金奖</code></td>
+      </tr>
+      <tr>
+        <td>中国教育报深度观察</td>
+        <td>官方到底想选什么样的人（教育部导向、选手原话、评委关注点）</td>
+        <td><a href="https://paper.jyb.cn/zgjyb/h5/html5/2026-04/23/content_144741_19476704.htm" target="_blank" rel="noopener">第三届校赛省赛观察</a></td>
+      </tr>
+      <tr>
+        <td>省级平台"选手风采"</td>
+        <td>省级获奖者展示，含研究生就业赛道等细分群体</td>
+        <td><a href="https://imut.nmbys.cn/news/view/aid/143226/tag/tzgg" target="_blank" rel="noopener">内蒙古工业大学选手风采录</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <blockquote>
+    中国教育报引用清华选手原话："去掉外在形式后，比的是你的志向、对未来的见解和当下行动。"<div class="quote-src">—— 这句话基本就是评委的判分逻辑。</div>
+  </blockquote>
+</section>
+
+<!-- ============ 10 ============ -->
+<section id="tools">
+  <h2><span class="no">10</span>权威工具：免费且评委认</h2>
+
+  <div class="scroll">
+  <table>
+    <thead><tr><th>工具</th><th>属性</th><th>用来做什么</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="https://xz.chsi.com.cn/home.action" target="_blank" rel="noopener">学职平台</a></td>
+        <td><span class="pill g">教育部官方</span></td>
+        <td><strong>首选</strong>：职业测评（本土化编制）、职业探索（112 个职业方向，含"工作者的一天"）、专业洞察、职业微视频。<span class="pill">报告里的自我认知/职业探索证据最好来自这里</span></td>
+      </tr>
+      <tr>
+        <td><a href="https://zgs.chsi.com.cn/" target="_blank" rel="noopener">大赛平台</a></td>
+        <td><span class="pill g">官方</span></td>
+        <td>生涯闯关 8 关＋《生涯探索成长单》；就业赛道职业适配度测评。免费</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.ncss.cn/" target="_blank" rel="noopener">国家大学生就业服务平台</a></td>
+        <td><span class="pill g">官方</span></td>
+        <td><strong>就业赛道必用</strong>：建简历入口；另有生涯教育公益直播课、宏志助航课程</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.onetonline.org/" target="_blank" rel="noopener">O*NET OnLine</a></td>
+        <td><span class="pill g">美国劳工部官方</span></td>
+        <td><strong>拆岗位</strong>：900+ 职业的任务、知识、技能、能力要求。<span class="pill y">英文</span> 把条目翻译成本专业语言写进报告，比空谈"我适合"有说服力</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.osta.org.cn/" target="_blank" rel="noopener">技能人才评价工作网</a></td>
+        <td><span class="pill g">人社部</span></td>
+        <td>查目标职业有没有<strong>国家职业技能标准/证书</strong>，能显著加强"岗位胜任力"论证</td>
+      </tr>
+      <tr>
+        <td>《职业分类大典（2022）》</td>
+        <td><span class="pill g">人社部等颁布</span></td>
+        <td>写"目标职业"时用<strong>标准职业名称</strong>，别自造岗位名</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="card warn">
+    <p style="margin:0"><strong>关于 MBTI：</strong>学术上对其信度效度与"类型化"有长期争议，企业招聘中不宜作选拔依据。<strong>不要把它当作报告的核心论证</strong>；要用，就作为"自我观察的一个视角"，并辅以真实行动证据。相对而言，霍兰德 RIASEC 兴趣理论实证支持更充分，O*NET 的兴趣剖面即基于此。</p>
+  </div>
+</section>
+
+<!-- ============ 11 ============ -->
+<section id="pitfalls">
+  <h2><span class="no">11</span>避坑清单：这些错每年都有人犯</h2>
+
+  <div class="grid2">
+    <div class="card warn">
+      <h4 style="margin-top:0">认知类</h4>
+      <ul style="margin-bottom:0;font-size:14px">
+        <li><strong>把"荣誉堆砌"当作品</strong>：好作品是向目标岗位靠拢的<strong>轨迹</strong>，不是奖状墙</li>
+        <li><strong>用第二届/第三届的标准</strong>：本届成长赛道权重已改（25/50/25）</li>
+        <li><strong>目标职业是"编"的</strong>：评委一问业务流程就穿帮，目标 10/25 分直接崩</li>
+        <li><strong>照搬网上模板</strong>：评委一天看几十份，模板化叙事最容易被记住"没特点"</li>
+      </ul>
+    </div>
+    <div class="card warn">
+      <h4 style="margin-top:0">操作类</h4>
+      <ul style="margin-bottom:0;font-size:14px">
+        <li><strong>卡着截止时间上传</strong>：截止后锁定，且要给管理员审核留时间</li>
+        <li><strong>报名后才改目标职业</strong>：晋级后不得修改，部分省直接取消资格</li>
+        <li><strong>材料超限</strong>：报告 PDF >10MB、PPT >50MB、辅助材料 >10MB 都传不上去</li>
+        <li><strong>忘记盖章</strong>：推荐省赛/国赛名单与材料需盖章确认，盖章即定稿</li>
+      </ul>
+    </div>
+    <div class="card warn">
+      <h4 style="margin-top:0">合规类</h4>
+      <ul style="margin-bottom:0;font-size:14px">
+        <li><strong>夸大/编造经历</strong>：通知明确"真实、原创"，造假取消资格并追责</li>
+        <li><strong>材料含涉密内容</strong>：须脱密处理</li>
+        <li><strong>成果与学历层次不匹配</strong>：审查重点之一，易引发质疑</li>
+        <li><strong>兼报两个赛道</strong>：一人只能报一个</li>
+      </ul>
+    </div>
+    <div class="card warn">
+      <h4 style="margin-top:0">培训陷阱</h4>
+      <ul style="margin-bottom:0;font-size:14px">
+        <li><strong>组委会不委托任何第三方开展培训</strong>（通知第九条）</li>
+        <li>凡"官方合作""内部名额""包获奖"的营销，按商业广告看待</li>
+        <li><strong>严禁教育培训类企业参与评审与企业心选团</strong>（附件3）</li>
+        <li>机构文章常拿往届口径当最新标准，引用前回官方附件核对</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12 ============ -->
+<section id="todo">
+  <h2><span class="no">12</span>我的待办（可勾选，打印后可手写）</h2>
+
+  <h3>本周内（信息补齐）</h3>
+  <ul class="check">
+    <li><input type="checkbox"><span>找到本校/本院第四届全国大学生职业规划大赛通知，记录<strong>报名截止日、材料提交方式、院赛时间、联系人电话</strong></span></li>
+    <li><input type="checkbox"><span>确认本校是否强制要求完成"生涯闯关"或"职业适配度测评"</span></li>
+    <li><input type="checkbox"><span>确认本校各赛道报名人数规模，判断晋级难度</span></li>
+    <li><input type="checkbox"><span>注册/登录 zgs.chsi.com.cn，下载《学生操作手册》，完成身份核验</span></li>
+  </ul>
+
+  <h3>确定赛道后（1—2 周）</h3>
+  <ul class="check">
+    <li><input type="checkbox"><span>定下<strong>目标职业 + 目标行业</strong>（写下来，不再改），并用学职平台/O*NET/职业分类大典验证其真实存在与要求</span></li>
+    <li><input type="checkbox"><span>联系指导教师，确认其能"实质参与"（审查项）</span></li>
+    <li><input type="checkbox"><span>做能力差距表：目标岗位要求 vs 我现在的证据，标出缺口</span></li>
+    <li><input type="checkbox"><span>补缺口：能短期拿到的证书/项目/实习/实践证明，先排进日程</span></li>
+  </ul>
+
+  <h3>材料阶段</h3>
+  <ul class="check">
+    <li><input type="checkbox"><span>成长赛道：2000 字报告初稿（目标/行动/调整三段）＋ ≤5 张图表</span></li>
+    <li><input type="checkbox"><span>就业赛道：求职简历（PDF）＋ 辅助证明材料整合成单个 PDF ≤10MB</span></li>
+    <li><input type="checkbox"><span>PPT 定稿，按 7 分钟（成长）/6 分钟（就业）卡时间试讲 3 遍</span></li>
+    <li><input type="checkbox"><span>找 2 位老师做模拟答辩，重点准备"目标为何是它""成果哪些是你主导""调整说明什么"</span></li>
+    <li><input type="checkbox"><span>提前 2—3 天完成平台上传，确认审核状态为"通过"</span></li>
+  </ul>
+</section>
+
+<!-- ============ 13 ============ -->
+<section id="files">
+  <h2><span class="no">13</span>资料文件与来源说明</h2>
+
+  <h3>工作区里的 4 份详细资料</h3>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>文件</th><th>内容</th></tr></thead>
+    <tbody>
+      <tr><td><code>资料/00-赛事总览与时间轴.md</code></td><td>通知全文要点、基本信息、时间轴、参赛资格红线、官方联系方式</td></tr>
+      <tr><td><code>资料/01-成长赛道.md</code></td><td>材料/环节/评分表逐字、与第三届对照、生涯闯关、12 项未确认信息</td></tr>
+      <tr><td><code>资料/02-就业赛道.md</code></td><td>材料/环节/评分表、目标职业填写限制、组别与晋级规则</td></tr>
+      <tr><td><code>资料/03-平台与备赛资源.md</code></td><td>12 步报名流程、报错处置、附件3 工作规范要点、37 条链接可信度表</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>官方原始文件（建议自己再下一次）</h3>
+  <ul>
+    <li>通知全文：<a href="http://www.moe.gov.cn/srcsite/a15/s7063/202610/t20261010_1453481.html" target="_blank" rel="noopener">教育部政府门户网站</a>（教学函〔2026〕2号）</li>
+    <li>附件1 成长赛道方案：<a href="http://www.moe.gov.cn/srcsite/a15/s7063/202610/W020261010465563639882.docx" target="_blank" rel="noopener">下载 .docx</a></li>
+    <li>附件2 就业赛道方案：<a href="http://www.moe.gov.cn/srcsite/a15/s7063/202610/W020261010465563631809.docx" target="_blank" rel="noopener">下载 .docx</a></li>
+    <li>附件3 校赛省赛工作规范：<a href="http://www.moe.gov.cn/srcsite/a15/s7063/202610/W020261010419003414028.docx" target="_blank" rel="noopener">下载 .docx</a></li>
+    <li>官方平台：<a href="https://zgs.chsi.com.cn/" target="_blank" rel="noopener">zgs.chsi.com.cn</a>（登录页可下载《学生操作手册》）</li>
+  </ul>
+
+  <h3>可信度说明（重要）</h3>
+  <div class="card note">
+    <p style="margin-top:0">本资料包的分值与材料要求，来自<strong>多所高校对教育部附件1/2 的逐字转载互证</strong>（青岛黄海学院、上海师范大学天华学院、长春职业技术大学、华南师范大学等），并已与教育部通知正文交叉核对。</p>
+    <p style="margin-bottom:0">但本次整理环境<strong>无法直接解析教育部 .docx 附件</strong>（二进制格式），因此：评分表的一级指标名称、<strong>是否允许 PPT 内嵌视频</strong>（第三届明确允许，第四届转载文本未见该表述）、是否要求脱稿等细节，仍建议以官方附件原文或本校通知最后核对一次。凡资料中标注"未确认"的项目，请勿当结论引用。</p>
+  </div>
+
+  <h3>官方联系方式</h3>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>单位</th><th>联系人</th><th>电话</th><th>邮箱</th></tr></thead>
+    <tbody>
+      <tr><td>教育部高校学生司</td><td>王宇彬</td><td class="num">010-66096042</td><td>xsszdc@moe.edu.cn</td></tr>
+      <tr><td>教育部学生服务与素质发展中心</td><td>邹军</td><td class="num">010-68358581</td><td>qgzgs@chsi.com.cn</td></tr>
+      <tr><td>重庆市教委学生处</td><td>陈卓</td><td class="num">023-60393900</td><td>xsc@cqedu.cn</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <footer>
+    资料整理：2026-10-28 ｜ 依据：《教育部关于举办第四届全国大学生职业规划大赛的通知》（教学函〔2026〕2号）及附件1、2、3，各省级教育厅与高校公开通知，学职平台、国家大学生就业服务平台等官方渠道。<br>
+    本文件为个人备赛参考，赛事规则以教育部原文及本校通知为最终依据。打印：浏览器 Ctrl/Cmd+P，建议勾选"背景图形"。
+  </footer>
+</section>
+</main>
+</div>
+</body>
+</html>
